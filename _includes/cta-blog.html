@@ -1,0 +1,24 @@
+<div class="Hero Hero--grey">
+    <div class="spacer-medium"></div>
+    <div class="wrapper">
+        <h2 class="align-center"><em>Well <strong>done</strong></em>.</h2>
+        <h6 class="align-center title-alt uppercase">Design is Dead has the ambition to always lead our clients to digital maturity.<br>And spread a little happiness along the journey. As our work documents...</h6>
+        <div class="spacer-medium"></div>
+        <div class="Teasers clearfix">
+            {% assign blogPosts = site.posts | where:"frontpage", "true" %}
+            {% for post in blogPosts limit:3 %}
+                <a href="{{ post.url }}" class="Teaser">
+                    <div class="Teaser-image" style="background-image: url({{ post.image }});"></div>
+                    <div class="blog-info">
+                        <div class="post-meta">
+                            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                        </div>
+                        <h3 class="post-name">{{ post.title }}</h3>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <p class="align-center"><a href="/blog" class="sr-button button-big">View all posts</a></p>
+    </div>
+    <div class="spacer-medium"></div>
+</div>

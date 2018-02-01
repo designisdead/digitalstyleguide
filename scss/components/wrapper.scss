@@ -1,0 +1,24 @@
+.Wrapper {
+  margin: 0 auto;
+  padding: 0 $spacer/2;
+
+  @each $key, $value in $sizes {
+    &.#{$key} {
+      max-width: $value;
+    }
+  }
+
+  &.unwrap {
+    position: relative;
+    left: 50%;
+    padding: 0;
+    width: 100vw;
+    transform: translateX(-50vw);
+    // because we are showing a sidebar on larger screens, we need to substract the width of this sidebar
+    @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+      width: calc(100vw - #{$layout-sidebar--expanded});
+      transform: translateX(calc(-50vw + #{$layout-sidebar--expanded}/2));
+    }
+
+  }
+}

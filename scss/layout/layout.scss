@@ -1,0 +1,106 @@
+.Layout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: darken($color-light,5%);
+}
+
+.Layout-sidebarState {
+  display: none;
+}
+
+.Layout-toggleSidebar {
+  position: relative;
+  width: $layout-sidebar--collapsed;
+  height: $layout-sidebar--collapsed;
+  cursor: pointer;
+  > svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    transform: translate3d(-50%, -50%, 0);
+    margin-left: -5px;
+  }
+  @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+    display: none;
+  }
+}
+
+.Layout-sidebar {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: $layout-sidebar--expanded;
+  height: 100%;
+  z-index: 6;
+  cursor: pointer;
+  will-change: transform;
+  transition: 0.25s transform ease, 0.25s color ease;
+  transform: translateX(0px);
+  overflow-y: overlay;
+  overflow-x: hidden;
+
+  // slide in sidebar when toggle is checked
+  #toggle-sidebar:checked ~ .Layout & {
+    transform: translateX(-#{$layout-sidebar--expanded});
+  }
+
+  // always hide the sidebar on desktop
+  @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+    transform: translateX(-#{$layout-sidebar--expanded});
+  }
+}
+
+.Layout-main {
+  position: fixed;
+  transition: 0.25s transform ease;
+  will-change: transform;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: calc(100vh - #{$layout-footerHeight});
+  width: 100%;
+
+  @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+    height: 100vh;
+    width: calc(100% - #{$layout-sidebar--expanded});
+  }
+
+  #toggle-sidebar:checked ~ .Layout & {
+    transform: translateX(-$layout-sidebar--expanded);
+    @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+      transform: translateX(0);
+    }
+  }
+}
+
+.Layout-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $layout-footerHeight;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  transition: 0.25s transform ease;
+  will-change: transform;
+  background: $color-light;
+
+  @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
+    display: none;
+  }
+
+  #toggle-sidebar:checked ~ .Layout & {
+    transform: translateX(-$layout-sidebar--expanded);
+  }
+}
+
+.Layout-footerContent {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $spacer/2;
+}

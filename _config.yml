@@ -1,0 +1,82 @@
+name : Styleguide
+permalink: pretty
+
+collections:
+  components:
+    output: true
+    permalink: /components/:title
+
+# Jekyll 3 now only supports Kramdown for Markdown
+kramdown:
+  # Use GitHub flavored markdown, including triple backtick fenced code blocks
+  input: GFM
+  # Jekyll 3 and GitHub Pages now only support rouge for syntax highlighting
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    # Use existing pygments syntax highlighting css
+    css_class: 'highlight'
+
+prose:
+  siteurl: 'http://www.designisdead.com/'
+  media: 'media'
+  ignore:
+    - .gitignore
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /files
+    - /fonts
+    - /css
+    - /js
+    - /scss
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "frontpage"
+        field:
+          element: "checkbox"
+          label: "Show on frontpage"
+      - name: "author"
+        field:
+          element: "text"
+          label: "Author"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+    _jobs:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "job"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Title"
+      - name: "description"
+        field:
+          element: "textarea"
+          label: "Description"
+    _employees:
+      - name: "name"
+        field:
+          element: "text"
+          label: "Name"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Job title"
+      - name: "darktext"
+        field:
+          element: "checkbox"
+          label: "Dark text"
+          
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          scss
+  style:            :compressed

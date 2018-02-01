@@ -1,0 +1,29 @@
+// SPACER
+$spacer: 40px;
+
+// GRID COLUMNS
+$grid-columns: 12;
+
+// FONTS
+$font-size: 16px;
+$font-primary: 'Roboto Condensed', sans-serif;
+$font-secondary: 'Serif';
+$line-height: 1.5; // only for paragraphs, all other elements will have a line-height of 1
+
+// COLORS
+$color-primary: #121212;
+$color-secondary: #15275b;
+$color-dark: #454545;
+$color-light: #fff;
+
+// SIZES / BREAKPOINTS
+$sizes: (tiny: 0px, small: 440px, medium: 800px, large: 1100px, huge: 1400px);
+@function size($size) {
+  @return map-get($sizes, $size);
+}
+
+// LAYOUT
+$layout-sidebar--collapsed: 46px;
+$layout-sidebar--expanded: 280px;
+$layout-sidebar--alwaysShowSidebar: 900px;
+$layout-footerHeight: 60px;

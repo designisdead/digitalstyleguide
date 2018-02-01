@@ -1,0 +1,30 @@
+.Hero {
+  min-height: 40vh;
+  display: flex;
+  background-size: cover;
+  background-position: center center;
+  &.tiny {
+    min-height: 10vh;
+  }
+  &.small {
+    min-height: 20vh;
+  }
+  &.medium {
+    min-height: 40vh;
+  }
+  &.large {
+    min-height: 60vh;
+  }
+  &.huge {
+    min-height: 80vh;
+  }
+  &.fullscreen {
+    min-height: 100vh;
+  }
+}
+
+.Hero-content {
+  flex: 1;
+  align-self: center;
+  padding: 0 $spacer/4;
+}

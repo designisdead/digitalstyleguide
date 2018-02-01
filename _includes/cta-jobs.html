@@ -1,0 +1,18 @@
+<div class="Hero Hero--dark">
+    <div class="spacer-big"></div>
+    <div class="wrapper-small align-center text-light">
+        <h6 class="title-alt uppercase">We play with new and proven technologies</h6>
+        <h2>Looking for a new opportunity?</h2>
+        <div class="spacer-small"></div>
+        <div class="Technologies">
+            {% for technology in site.technologies %}
+            <div class="Technology Technology--tiny">
+                {% include {{ technology.id }}.svg %}
+            </div>
+            {% endfor %}
+        </div><!-- Technologies -->
+        <div class="spacer-medium"></div>
+        <p><a href="/jobs" class="sr-button button-big">Come play with us</a></p>
+        <div class="spacer-big"></div>
+    </div>
+</div>

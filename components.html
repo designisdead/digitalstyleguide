@@ -1,0 +1,8 @@
+---
+layout: page
+title: Components
+description: We love positive thinkers and digital do-ers. Team players, who get the job done.
+---
+{% for component in site.components %}
+<a href="{{ component.url }}">{{ component.title }}</a><br/>
+{% endfor %}

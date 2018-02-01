@@ -1,0 +1,8 @@
+.Columns {
+  display: flex;
+  margin: 0 -#{$spacer/2};
+}
+
+.Column {
+  padding: 0 $spacer/2;
+}

@@ -1,0 +1,17 @@
+// CONFIG
+@import "config";
+@import "mixins";
+@import "syntax";
+
+// STRUCTURE
+@import "layout/footerMenu";
+@import "layout/layout";
+
+// RESET
+@import "reset";
+
+// COMPONENTS
+@import "components/_main";
+
+// UTILS
+@import "utils";

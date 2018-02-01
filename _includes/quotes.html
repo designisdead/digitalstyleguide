@@ -1,0 +1,17 @@
+{% assign quotes = site.quotes %}
+{% if quotes.size > 0 %}
+<div class="Hero--grey fullwidth-section">
+    <div class="fullwidth-content">
+        <div class="owl-slider content-slider">
+            {% for quote in quotes %}
+            <div>
+                <blockquote class="align-center">
+                    <p>{{ quote.quote }}</p>
+                    <cite>{{ quote.name }}</cite>
+                </blockquote>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> <!-- END .fullwidth-section -->
+{% endif %}
