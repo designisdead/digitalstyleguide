@@ -1,0 +1,17 @@
+ul {
+  li {
+    position: relative;
+    padding-left: $spacer/2;
+    &:before {
+      content: ' ';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $color-dark;
+      display: block;
+      position: absolute;
+      top: 5px;
+      left: 6px;
+    }
+  }
+}

@@ -10,3 +10,4 @@ description: ...
 * [Audi's brand guidelines](http://www.audi.com/ci/en/renewed-brand.html)
 * [Google's Material Design guidelines](https://material.io/guidelines/material-design/introduction.html)
 * [Marral CSS](https://marrel.inktweb.nl)
+* [Atlaskit](https://atlaskit.atlassian.com/)
