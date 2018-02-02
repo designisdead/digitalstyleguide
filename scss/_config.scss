@@ -25,5 +25,5 @@ $sizes: (tiny: 0px, small: 440px, medium: 800px, large: 1100px, huge: 1400px);
 // LAYOUT
 $layout-sidebar--collapsed: 46px;
 $layout-sidebar--expanded: 280px;
-$layout-sidebar--alwaysShowSidebar: 900px;
+$layout-sidebar--alwaysShowSidebar: size('huge');
 $layout-footerHeight: 60px;

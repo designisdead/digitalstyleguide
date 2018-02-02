@@ -35,7 +35,6 @@
   width: $layout-sidebar--expanded;
   height: 100%;
   z-index: 6;
-  cursor: pointer;
   will-change: transform;
   transition: 0.25s transform ease, 0.25s color ease;
   transform: translateX(0px);
