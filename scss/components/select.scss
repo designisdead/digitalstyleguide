@@ -1,3 +1,28 @@
 .Select {
-  @extend .Formfield;
+  display: block;
+  position: relative;
+  margin-top: 20px;
+  select {
+    @extend .Formfield;
+    z-index: 1;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.Select-label {
+  @extend .Label;
+}
+
+.Select-arrow {
+  position: absolute;
+  bottom: 18px;
+  right: 15px;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: $color-dark transparent transparent;
+  margin-top: 4px;
+  z-index: 0;
 }

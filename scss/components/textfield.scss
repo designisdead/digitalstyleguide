@@ -1,3 +1,20 @@
 .Textfield {
   @extend .Formfield;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.Textfield-legend {
+  @extend .Label;
+}
+
+.Textfield-input {
+  flex: 1;
+  border: none;
+  height: 100%;
+  &:focus {
+    outline: none;
+  }
 }

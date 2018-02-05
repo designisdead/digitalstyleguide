@@ -1,0 +1,51 @@
+.Checkbox {
+  position: relative;
+  padding-left: 30px;
+  display: inline-block;
+  cursor: pointer;
+  margin-right: 25px;
+  font-weight: normal;
+  -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+  -moz-user-select: none; /* mozilla browsers */
+  -khtml-user-select: none; /* webkit (konqueror) browsers */
+  -ms-user-select: none; /* IE10+ */
+}
+
+.Checkbox-input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.Checkbox-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  margin-top: -11px;
+  background: #fff;
+  border: 1px solid darken($color-light, 10%);
+
+  .Checkbox-input:active + &,
+  .Checkbox-input:focus + &{
+    border-color: darken($color-light, 40%);
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: ' ';
+    transform: translate3d(-50%, -50%, 0);
+    width: 0px;
+    height: 0px;
+
+    .Checkbox-input:checked + & {
+      background: $color-primary;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

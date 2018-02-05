@@ -1,0 +1,15 @@
+.Textarea {
+  position: relative;
+}
+
+.Textarea-legend {
+  @extend .Label;
+
+  position: absolute;
+  top: -15px;
+  left: 0;
+}
+
+.Textfield-input {
+  @extend .Formfield;
+}
