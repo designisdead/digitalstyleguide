@@ -6,29 +6,18 @@ published: true
 ---
 <p>
   <span class="Textfield">
-    <label for="text1" class="Textfield-legend">Text</label>
+    <label for="text1" class="Textfield-legend">Textfield</label>
     <input type="text" id="text1" class="Textfield-input" placeholder="Placeholder" />
   </span>
-  <small>Please select an option</small>
+  <small>Please enter some text</small>
 </p>
 
 <p>
   <span class="Textfield">
-    <label for="text1" class="Textfield-legend">Textfield with icon</label>
-    <input type="text" id="text1" class="Textfield-input" placeholder="Placeholder" />
-    <button>
-      <svg width="20" height="20">
-        <use xlink:href="#svg-search"></use>
-      </svg>
-    </button>
+    <label for="text2" class="Textfield-legend">Disabled textfield</label>
+    <input type="text" id="text2" class="Textfield-input" placeholder="Placeholder" disabled />
   </span>
-</p>
-
-<p>
-  <span class="Textfield">
-    <label for="text1" class="Textfield-legend">Text</label>
-    <input type="text" id="text1" class="Textfield-input" placeholder="Placeholder" />
-  </span>
+  <small>Please enter some text</small>
 </p>
 
 <p>
@@ -45,11 +34,25 @@ published: true
   <small>Please select an option</small>
 </p>
 
+<p>
+  <span class="Select">
+    <label class="Select-label" for="select1">Select</label>
+    <select id="select1" disabled>
+      <option>Option 1</option>
+      <option>Option 2</option>
+      <option>Option 3</option>
+      <option>Option 4</option>
+    </select>
+    <span class="Select-arrow"></span>
+  </span>
+  <small>Please select an option</small>
+</p>
 
-<h2>Checkbox</h2>
+
+<h3>Checkbox</h3>
 <p>
   <label class="Checkbox">
-    First checkbox
+    Checkbox
     <input class="Checkbox-input" type="checkbox" name="checkbox1" />
     <span class="Checkbox-indicator"></span>
   </label>
@@ -57,8 +60,8 @@ published: true
 
 <p>
   <label class="Checkbox">
-    First checkbox
-    <input class="Checkbox-input" type="checkbox" name="checkbox1" />
+    Disabled checkbox
+    <input class="Checkbox-input" type="checkbox" name="checkbox2" disabled />
     <span class="Checkbox-indicator"></span>
   </label>
 </p>
@@ -83,5 +86,46 @@ published: true
     Inline checkbox 3
     <input class="Checkbox-input" type="checkbox" name="checkbox3" />
     <span class="Checkbox-indicator"></span>
+  </label>
+</p>
+
+
+<h3>Radio</h3>
+<p>
+  <label class="Radio">
+    Radio
+    <input class="Radio-input" type="checkbox" name="radio1" />
+    <span class="Radio-indicator"></span>
+  </label>
+</p>
+
+<p>
+  <label class="Radio">
+    Disabled radio
+    <input class="Radio-input" type="radio" name="radio2" disabled />
+    <span class="Radio-indicator"></span>
+  </label>
+</p>
+
+<h3>Inline radios</h3>
+<p>
+  <label class="Checkbox">
+    Inline radio 1
+    <input class="Radio-input" type="radio" name="radio3" />
+    <span class="Radio-indicator"></span>
+  </label>
+
+
+  <label class="Checkbox">
+    Inline radio 2
+    <input class="Radio-input" type="radio" name="radio3" />
+    <span class="Radio-indicator"></span>
+  </label>
+
+
+  <label class="Checkbox">
+    Inline checkbox 3
+    <input class="Radio-input" type="radio" name="radio3" />
+    <span class="Radio-indicator"></span>
   </label>
 </p>

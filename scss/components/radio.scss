@@ -1,0 +1,16 @@
+.Radio {
+  @extend .Checkbox;
+}
+
+.Radio-input {
+  @extend .Checkbox-input;
+}
+
+.Radio-indicator {
+  @extend .Checkbox-indicator;
+  border-radius: 50%;
+
+  &:after {
+    border-radius: 50%;
+  }
+}

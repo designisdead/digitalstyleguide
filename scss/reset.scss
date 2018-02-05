@@ -73,3 +73,8 @@ label {
   display: block;
   font-weight: bold;
 }
+
+small {
+  font-size: 0.8rem;
+  color: darken($color-light, 50%);
+}

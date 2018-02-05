@@ -27,11 +27,18 @@
   background: #fff;
   border: 1px solid darken($color-light, 10%);
 
-  .Checkbox-input:active + &,
+  // disabled
+  .Checkbox-input:disabled + & {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .Checkbox-input:active:not(:disabled) + &,
   .Checkbox-input:focus + &{
     border-color: darken($color-light, 40%);
   }
 
+  // checked
   &:after {
     position: absolute;
     top: 50%;

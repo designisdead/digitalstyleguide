@@ -1,13 +1,11 @@
 .Textarea {
+  display: block;
   position: relative;
+  margin-top: 20px;
 }
 
 .Textarea-legend {
   @extend .Label;
-
-  position: absolute;
-  top: -15px;
-  left: 0;
 }
 
 .Textfield-input {
