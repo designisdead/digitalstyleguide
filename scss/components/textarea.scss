@@ -2,12 +2,14 @@
   display: block;
   position: relative;
   margin-top: 20px;
+  textarea {
+    @extend .Formfield;
+
+    min-height: 140px;
+    padding: 10px;
+  }
 }
 
 .Textarea-legend {
   @extend .Label;
-}
-
-.Textfield-input {
-  @extend .Formfield;
 }
