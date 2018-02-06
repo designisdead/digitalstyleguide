@@ -28,3 +28,10 @@
   align-self: center;
   padding: 0 $spacer/4;
 }
+
+.Hero-title {
+  font-style: italic;
+  font-size: 3.75rem;
+  font-weight: normal;
+  text-shadow: 0 2px 10px rgba($color-dark, 0.35);
+}

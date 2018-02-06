@@ -21,8 +21,8 @@ Within Hero-content you can use other components like wrappers, titles,...
     <div class="Hero" style="background-image: url(/media/design-is-dead-team.jpg);">
         <div class="Hero-content">
             <!-- Hero content starts here -->
-            <div class="Wrapper small">
-                <div class="Title large u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
+            <div class="Wrapper medium">
+                <div class="Hero-title u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
             </div>
             <!-- Hero content ends here -->
         </div>
@@ -32,8 +32,8 @@ Within Hero-content you can use other components like wrappers, titles,...
 <div class="Hero" style="background-image: url(/media/design-is-dead-team.jpg);">
     <div class="Hero-content">
         <!-- Hero content starts here -->
-        <div class="Wrapper small">
-            <div class="Title large u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
+        <div class="Wrapper medium">
+            <div class="Hero-title u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
         </div>
         <!-- Hero content ends here -->
     </div>
