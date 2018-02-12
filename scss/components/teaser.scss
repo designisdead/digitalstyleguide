@@ -44,15 +44,6 @@ $teaserIconSize: 120px;
   height: $teaserIconSize;
   transform: translate3d(calc(50% + 10px),-50%,0);
 
-  @media screen and (min-width: size('large')){
-    right: size('large')/4;
-    .Teaser:nth-child(even) & {
-      right: auto;
-      left: size('large')/4;
-      transform: translate3d(calc(-50% - 10px),-50%,0);
-    }
-  }
-
   > svg {
     width: 100%;
     height: 100%;
