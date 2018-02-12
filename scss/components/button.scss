@@ -16,31 +16,9 @@
   -webkit-user-select: none; /* for button */
   -moz-user-select: none;
   -ms-user-select: none;
-  /* testtest*/
-
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    display: block;
-    background-color: rgba(255,255,255,0.08);
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%,-50%,0);
-    transition: 0.4s width cubic-bezier(0.770, 0.000, 0.175, 1.000), 0.8s opacity cubic-bezier(0.770, 0.000, 0.175, 1.000);
-    z-index: 0;
-    border-radius: 50%;
-    opacity: 1;
-  }
 
   &:hover {
     cursor: pointer;
-    &:after {
-      width: 125%;
-      height: 150%;
-      opacity: 1;
-    }
   }
 
   // Button sizes
