@@ -11,10 +11,11 @@ $font-secondary: 'Arial', sans-serif;
 $line-height: 1.5; // only for paragraphs, all other elements will have a line-height of 1
 
 // COLORS
-$color-primary: #121212;
+$color-primary: #000;
 $color-secondary: #15275b;
-$color-dark: #454545;
 $color-light: #fff;
+$color-medium: #787878;
+$color-dark: #454545;
 
 // SIZES / BREAKPOINTS
 $sizes: (tiny: 0px, small: 440px, medium: 800px, large: 1100px, huge: 1400px);
