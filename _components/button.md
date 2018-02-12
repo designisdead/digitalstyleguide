@@ -14,28 +14,16 @@ Optional modifiers: outline, link
 
 <button class="Button">Button</button>
 <button class="Button outline">Button outline</button>
-<button class="Button link">Button link</button>
 ```html
 <button class="Button">Button</button>
 <button class="Button outline">Button outline</button>
-<button class="Button link">Button link</button>
 ```
 ___
 
 ### Size modifier
-Optional modifiers: tiny, small, medium, large, huge, fullwidth
+Optional modifiers: fullwidth
 
-<button class="Button tiny">Button tiny</button>
-<button class="Button small">Button small</button>
-<button class="Button medium">Button medium</button>
-<button class="Button large">Button large</button>
-<button class="Button huge">Button huge</button>
 <button class="Button huge fullWidth">Button huge fullWidth</button>
 ```html
-<button class="Button tiny">Button tiny</button>
-<button class="Button small">Button small</button>
-<button class="Button medium">Button medium</button>
-<button class="Button large">Button large</button>
-<button class="Button huge">Button huge</button>
 <button class="Button huge fullWidth">Button huge fullWidth</button>
 ```

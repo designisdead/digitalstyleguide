@@ -44,26 +44,6 @@
   }
 
   // Button sizes
-  &.tiny {
-    padding: 0 6px;
-    font-size: 0.6rem;
-  }
-
-  &.small {
-    padding: 4px 8px;
-    font-size: 0.75rem;
-  }
-
-  &.large {
-    padding: 12px 24px;
-    font-size: 1.2rem;
-  }
-
-  &.huge {
-    padding: 16px 32px;
-    font-size: 1.5rem;
-  }
-
   &.fullWidth {
     width: 100%;
   }
@@ -73,15 +53,5 @@
     background-color: transparent;
     border-color: $color-dark;
     color: $color-dark;
-  }
-
-  &.link {
-    background-color: transparent;
-    border-color: transparent;
-    color: $color-primary;
-    text-decoration: underline;
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
