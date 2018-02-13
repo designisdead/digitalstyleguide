@@ -13,10 +13,8 @@ ___
 Optional modifiers: outline, link
 
 <button class="Button">Button</button>
-<button class="Button outline">Button outline</button>
 ```html
 <button class="Button">Button</button>
-<button class="Button outline">Button outline</button>
 ```
 ___
 
