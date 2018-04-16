@@ -22,7 +22,7 @@ Within Hero-content you can use other components like wrappers, titles,...
         <div class="Hero-content">
             <!-- Hero content starts here -->
             <div class="Wrapper medium">
-                <div class="Hero-title u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
+                <div class="Hero-title u-color--light u-textAlignCenter">Our managing director playing piano like a boss</div>
             </div>
             <!-- Hero content ends here -->
         </div>
@@ -33,7 +33,7 @@ Within Hero-content you can use other components like wrappers, titles,...
     <div class="Hero-content">
         <!-- Hero content starts here -->
         <div class="Wrapper medium">
-            <div class="Hero-title u-colorLight u-textAlignCenter">Our managing director playing piano like a boss</div>
+            <div class="Hero-title u-color--light u-textAlignCenter">Our managing director playing piano like a boss</div>
         </div>
         <!-- Hero content ends here -->
     </div>

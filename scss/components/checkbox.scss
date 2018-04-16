@@ -25,7 +25,7 @@
   height: 20px;
   margin-top: -11px;
   background: #fff;
-  border: 1px solid darken($color-light, 10%);
+  border: 1px solid darken(color('light'), 10%);
 
   // disabled
   .Checkbox-input:disabled + & {
@@ -35,7 +35,7 @@
 
   .Checkbox-input:active:not(:disabled) + &,
   .Checkbox-input:focus + &{
-    border-color: darken($color-light, 40%);
+    border-color: darken(color('light'), 40%);
   }
 
   // checked
@@ -50,7 +50,7 @@
     height: 0px;
 
     .Checkbox-input:checked + & {
-      background: $color-primary;
+      background: color('primary');
       width: 10px;
       height: 10px;
     }

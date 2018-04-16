@@ -7,15 +7,15 @@
 }
 
 a {
-  color: $color-primary;
+  color: color('primary');
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 
-  .u-backgroundColorPrimary & {
-    color: $color-light;
+  .u-backgroundColor--primary & {
+    color: color('light');
   }
 }
 
@@ -30,7 +30,7 @@ li {
 body {
   font: #{$font-size} / 1 $font-primary;
   overflow-x: hidden;
-  color: $color-dark;
+  color: color('dark');
 }
 
 button {
@@ -41,15 +41,15 @@ button {
 hr {
   border: none;
   height: 1px;
-  border-bottom: 1px solid $color-dark;
+  border-bottom: 1px solid color('dark');
   margin-top: $spacer/2;
   margin-bottom: $spacer;
   display: inline-block;
   width: 100%;
   opacity: 0.2;
-  .u-backgroundColorPrimary &,
-  .u-backgroundColorDark & {
-    border-color: $color-light;
+  .u-backgroundColor--primary &,
+  .u-backgroundColor--dark & {
+    border-color: color('light');
   }
 }
 
@@ -78,5 +78,5 @@ label {
 
 small {
   font-size: 0.8rem;
-  color: darken($color-light, 50%);
+  color: darken(color('light'), 50%);
 }

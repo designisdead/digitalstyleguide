@@ -7,50 +7,24 @@
   margin: 0 auto;
 }
 
-.u-colorLight {
-  color: $color-light;
-}
-
-.u-colorDark {
-  color: $color-dark;
-}
-
-.u-colorTwitter {
-  color: $color-twitter;
-}
-
-.u-colorFacebook {
-  color: $color-facebook;
-}
-
-.u-colorLinkedin {
-  color: $color-linkedin;
-}
-
-.u-backgroundColorPrimary {
-  background-color: $color-primary;
-}
-
-.u-backgroundColorLight {
-  background-color: $color-light;
-}
-
-.u-backgroundColorDark {
-  background-color: $color-dark;
-}
-
-.u-textColorWhite {
-  color: $color-light;
-  a {
-    color: $color-light;
-  }
-}
-
 .u-noListStyleType {
   li {
     padding-left: 0;
     &:before {
       display: none;
+    }
+  }
+}
+
+@each $key, $value in $colors {
+  .u-backgroundColor--#{$key} {
+    background-color: $value;
+  }
+
+  .u-color--#{$key} {
+    color: $value;
+    a {
+      color: $value;
     }
   }
 }

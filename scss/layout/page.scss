@@ -94,7 +94,7 @@ $pageSidebarMinimumWidth: 280px;
   position: fixed;
   width: 100%;
   height: $pageHeaderHeight;
-  background: $color-light;
+  background: color('light');
   z-index: 1;
 }
 

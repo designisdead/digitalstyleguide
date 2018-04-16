@@ -2,7 +2,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: darken($color-light,5%);
+  background: darken(color('light'),5%);
 }
 
 .Styleguide-sidebarState {
@@ -85,7 +85,7 @@
   align-items: center;
   transition: 0.25s transform ease;
   will-change: transform;
-  background: $color-light;
+  background: color('light');
 
   @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
     display: none;
