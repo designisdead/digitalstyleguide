@@ -31,8 +31,19 @@
   background-color: $color-primary;
 }
 
+.u-backgroundColorLight {
+  background-color: $color-light;
+}
+
 .u-backgroundColorDark {
   background-color: $color-dark;
+}
+
+.u-textColorWhite {
+  color: $color-light;
+  a {
+    color: $color-light;
+  }
 }
 
 .u-noListStyleType {

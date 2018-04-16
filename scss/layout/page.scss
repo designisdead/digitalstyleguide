@@ -1,4 +1,5 @@
 $pageHeaderHeight: 75px;
+$pageSidebarMinimumWidth: 280px;
 
 .Page-sidebarState {
   display: none;
@@ -6,35 +7,44 @@ $pageHeaderHeight: 75px;
 
 .Page {
   position: fixed;
-  height: 100vh;
-  width: 180vw;
-  transform: translate3d(-80vw,0,0);
-
-  transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
-  .Page-sidebarState:checked + & {
-    transform: translate3d(0,0,0);
-  }
+  height: 100%;
+  width: 100%;
 }
 
 .Page-sidebar {
   position: fixed;
-  width: 80vw;
   height: 100vh;
   background: black;
   color: white;
   padding: 20px;
-  overflow-y: scroll;
+  width: $pageSidebarMinimumWidth;
+  transform: translate3d(-$pageSidebarMinimumWidth + 50, 0, 0);
+  transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
+
+  @media screen and (min-width: size('small')){
+    width: $pageSidebarMinimumWidth+50;
+    transform: translate3d(-$pageSidebarMinimumWidth + 100, 0, 0);
+  }
+
+  .Page-sidebarState:checked + .Page & {
+    transform: translate3d(0,0,0);
+  }
 }
 
 .Page-main {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  left: 80vw;
+  left: 0;
   overflow-y: scroll;
+  transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
 
   .Page-sidebarState:checked + .Page & {
     overflow-y: hidden;
+    transform: translate3d($pageSidebarMinimumWidth,0,0);
+    @media screen and (min-width: size('small')) {
+      transform: translate3d($pageSidebarMinimumWidth+50,0,0);
+    }
   }
 }
 
