@@ -20,6 +20,7 @@ $pageSidebarMinimumWidth: 280px;
   width: $pageSidebarMinimumWidth;
   transform: translate3d(-$pageSidebarMinimumWidth + 50, 0, 0);
   transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
+  will-change: transform;
 
   @media screen and (min-width: size('small')){
     width: $pageSidebarMinimumWidth+50;
@@ -38,6 +39,7 @@ $pageSidebarMinimumWidth: 280px;
   left: 0;
   overflow-y: scroll;
   transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
+  will-change: transform;
 
   .Page-sidebarState:checked + .Page & {
     overflow-y: hidden;
