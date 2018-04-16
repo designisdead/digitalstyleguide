@@ -93,17 +93,11 @@ $pageSidebarMinimumWidth: 280px;
 }
 
 .Page-header {
-  position: fixed;
+  position: relative; // IE11
+  position: sticky;
   width: 100%;
   height: $pageHeaderHeight;
   background: color('light');
   z-index: 1;
-}
-
-.Page-content {
-  padding-top: $pageHeaderHeight;
-}
-
-.Page-footer {
-  
+  top: 0;
 }
