@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<input type="checkbox" id="toggle-sidebar" class="Styleguide-sidebarState" name="toggle-sidebar">
+<div class="Styleguide">
+    <div class="Styleguide-sidebar u-backgroundColorPrimary u-colorLight">
+        <div class="Hero small">
+            <div class="Hero-content centered">
+                <a href="/" title="Return to our homepage">
+                    <svg width="80" height="35" class="u-centered"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use></svg>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="Spacer">
+            <div class="Title small"><a href="/styleguide/logos/">Logos</a></div>
+            <div class="Title small"><a href="/styleguide/typography/">Typography</a></div>
+            <div class="Title small"><a href="/styleguide/components">Components</a></div>
+            <p>
+                {% for component in site.components %}
+                <a href="{{ component.url }}">{{ component.title }}</a><br/>
+                {% endfor %}
+            </p>
+
+            <div class="Title small"><a href="/styleguide/browser-support">Browser support</a></div>
+
+            <div class="Title small"><a href="/styleguide/inspired-by">Inspired by</a></div>
+        </div>
+    </div><!-- Sidebar -->
+
+    <div id="scrollingPanel" class="Styleguide-main">
+        <article>
+            <header class="Hero small">
+                <div class="Hero-content">
+                    <div class="Wrapper large">
+                        <h1 class="Title huge">{{ page.title }}</h1>
+                    </div>
+                </div>
+            </header>
+            <hr/>
+
+            <div class="Wrapper large">
+                {{ content }}
+            </div>
+        </article>
+    </div>
+
+    <div class="Styleguide-footer">
+        <div class="Styleguide-footerContent">
+            <a href="/" title="Return to our homepage">
+                <svg width="70" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use></svg>
+            </a>
+            <label class="Styleguide-toggleSidebar" for="toggle-sidebar">
+                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-menu"></use></svg>
+            </label>
+        </div>
+    </div>
+</div>

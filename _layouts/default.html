@@ -10,9 +10,6 @@
     <!-- DOCUMENT TITLE -->
     <title>{{ page.title }}</title>
 
-    <!-- GOOGLE WEBFONTS -->
-    <link rel="stylesheet" href="https://use.typekit.net/cxs1evf.css">
-
     <!-- DEFAULT META TAGS -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
@@ -20,6 +17,7 @@
     <meta name="description" content="{{ page.description | default:'Styleguide' }}">
 
     <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/cxs1evf.css">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500" rel="stylesheet" type="text/css">
 
@@ -30,103 +28,14 @@
 
 <body class="{% if page.bodyclass %}Body--{{ page.bodyclass | slugify }}{% endif %}">
 
-<input type="checkbox" id="toggle-sidebar" class="Layout-sidebarState" name="toggle-sidebar">
-<div class="Layout">
-    <div class="Layout-sidebar u-backgroundColorPrimary u-colorLight">
-        <div class="Hero small">
-            <div class="Hero-content centered">
-                <a href="/" title="Return to our homepage">
-                    <svg width="80" height="35" class="u-centered"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use></svg>
-                </a>
-            </div>
-        </div>
-        <hr>
-        <div class="Spacer">
-            <div class="Title small"><a href="/logos">Logos</a></div>
-            <div class="Title small"><a href="/typography">Typography</a></div>
-            <div class="Title small"><a href="/components">Components</a></div>
-            <p>
-                {% for component in site.components %}
-                <a href="{{ component.url }}">{{ component.title }}</a><br/>
-                {% endfor %}
-            </p>
+    {{ content }}
 
-            <div class="Title small"><a href="/browser-support">Browser support</a></div>
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="/js/bundle.js"></script>
+    <!-- SCRIPTS -->
 
-            <div class="Title small"><a href="/inspired-by">Inspired by</a></div>
-        </div>
-    </div><!-- Sidebar -->
-
-    <div class="Layout-main">
-        {{ content }}
-    </div>
-
-    <div class="Layout-footer">
-        <div class="Layout-footerContent">
-            <a href="/" title="Return to our homepage">
-                <svg width="70" height="30"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-logo"></use></svg>
-            </a>
-            <label class="Layout-toggleSidebar" for="toggle-sidebar">
-                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-menu"></use></svg>
-            </label>
-        </div>
-    </div>
-</div>
-
-<!-- SCRIPTS -->
-<script type="text/javascript" src="/js/bundle.js"></script>
-<!-- SCRIPTS -->
-
-<!-- SVG Icons  -->
-<svg style="display: none;">
-    <!-- Logo -->
-    <symbol id="svg-logo" viewBox="0 0 100 61">
-        <path fill="currentColor" d="M14.461,59.2c0.825-2.102,3.405-2.551,5.278-3.441
-		c1.841-0.876,4.195-1.754,5.507-3.213c4.019-4.468,1.548-13.749-3.441-14.684c-2.275-0.427-4.793,0.711-7.113,0.688
-		C3.452,38.436-1.843,27.13,2.53,18.587c0.904-1.766,2.756-2.908,3.671-4.359c0.609-0.969,0.544-2.387,1.376-3.213
-		c0.594-0.589,2.54-1.46,3.901-1.376c1.311,0.082,1.936,1.2,3.213,1.606c1.002,0.319,2.718,0.327,4.129,0.688
-		c5.621,1.439,5.337-0.443,8.261-3.9c1.137-1.344,3.436-2.593,4.131-3.442c0.569-0.697,0.997-2.495,1.835-2.983
-		c0.95-0.553,2.657-0.783,4.129-0.459c0.972,0.214,1.583,1.355,2.983,2.065c1.182,0.598,2.648,0.642,3.671,1.147
-		c2.39,1.18,3.475,3.822,6.195,3.901c2.3,0.066,3.544-2.302,6.195-3.671c1.147-0.592,2.459-0.689,3.442-1.147
-		c2.431-1.133,3.869-3.723,7.802-1.606c0.664,2.883,2.943,3.305,5.047,5.507c1.733,1.814,2.722,5.129,4.818,5.507
-		c1.289,0.232,2.439-0.64,4.361-1.147c1.36-0.36,2.706-0.165,3.67-0.459c1.283-0.392,2.01-1.506,3.213-1.606
-		c1.439-0.12,2.596,0.711,4.13,1.376c1.796,5.647,7.082,6.943,6.195,15.604c-0.54,5.286-5.258,11.822-13.309,11.932
-		c-2.194,0.03-4.639-1.077-7.113-0.688c-4.968,0.779-7.886,9.253-3.9,14.226c1.673,2.087,5.565,3.388,8.719,5.048
-		c0.738,0.388,2.376,1.273,2.295,2.064c-0.213,2.103-6.32,0.242-7.801,0c-17.346-2.831-38.159-2.901-55.528-0.229
-		C19.69,59.367,16.656,61.035,14.461,59.2z M37.636,26.847c3.471,0.021,7.702-2.565,8.949-5.965
-		c2.154-5.873-1.684-10.716-4.819-12.162c-1.406-0.648-3.864-0.898-5.507-0.688C25.429,9.416,25.522,26.772,37.636,26.847z
-		 M53.927,13.08c-3.752,7.451,2.811,14.279,9.408,13.767C75.66,25.891,74.03,6.432,61.499,8.032
-		C57.396,8.556,54.755,11.439,53.927,13.08z M5.512,25.7C6.546,39.031,28.42,35,23.41,21.341c-1.304-3.555-5.508-5.99-9.637-5.507
-		C8.772,16.417,5.094,20.305,5.512,25.7z M76.185,26.159c1.391,11.763,20.354,9.579,18.355-2.982
-		c-0.677-4.262-5.103-8.01-10.325-7.343C78.893,16.514,75.533,20.646,76.185,26.159z M43.143,30.978
-		c-3.987,1.474-7.534,1.219-8.949,3.211c-2.852,4.016,1.935,12.317,3.901,13.768c4.383,3.233,19.908,2.606,23.635,0.23
-		c2.04-1.302,7.011-10.172,4.129-14.227c-1.581-2.225-5.858-1.438-9.637-2.983c-3.061-1.254-4.054-3.44-7.342-2.753
-		C46.626,28.695,45.774,30.004,43.143,30.978z"/>
-    </symbol>
-
-    <!-- Close -->
-    <symbol id="svg-close" viewBox="0 0 100 100">
-        <path fill="currentColor" d="M57.48,5.3H42.52C14.84,5.3,1,19.514,1,50.186c0,29.176,14.775,44.511,41.52,44.511H57.48
-        C85.161,94.696,99,80.857,99,50.186C99,21.01,84.226,5.3,57.48,5.3z M79.645,75.427c-4.403,4.642-11.653,6.896-22.164,6.896H42.52
-        c-9.819,0-17.146-2.495-21.776-7.419c-4.891-5.199-7.37-13.516-7.37-24.719c0-11.926,2.368-20.501,7.037-25.486
-        c4.429-4.728,11.661-7.026,22.109-7.026H57.48c12.512,0,29.146,3.371,29.146,32.512C86.627,62.051,84.277,70.543,79.645,75.427z"/>
-        <polygon fill="currentColor" points="64.398,28.602 50.001,42.999 35.603,28.602 28.604,35.6 43.001,49.998 28.604,64.396 35.603,71.395 50.001,56.997
-        64.398,71.395 71.396,64.396 56.999,49.998 71.396,35.6"/>
-    </symbol>
-
-    <!-- Menu -->
-    <symbol id="svg-menu" viewbox="0 0 64 64">
-        <rect fill="currentColor" y="7" width="64" height="10" rx="5" ry="5"/>
-        <rect fill="currentColor" y="27" width="64" height="10" rx="5" ry="5"/>
-        <rect fill="currentColor" y="47" width="64" height="10" rx="5" ry="5"/>
-    </symbol>
-
-    <!-- Search -->
-    <symbol id="svg-search" viewBox="0 0 18.207 17.582">
-        <circle fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" cx="11.036" cy="7.171" r="5.829"/>
-        <line fill="none" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" x1="0.707" y1="16.875" x2="6.02" y2="11.563"/>
-    </symbol>
-</svg>
+    <!-- SVG Icons  -->
+    {% include icons.html %}
 
 </body>
 </html>

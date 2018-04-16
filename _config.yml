@@ -2,9 +2,11 @@ name : Styleguide
 permalink: pretty
 
 collections:
+  services:
+    output: false
   components:
     output: true
-    permalink: /components/:title
+    permalink: /styleguide/components/:title/
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:

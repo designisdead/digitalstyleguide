@@ -1,0 +1,47 @@
+.Icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+
+  @each $key, $value in $sizes {
+    &.#{$key} {
+      height: ceil($value/26);
+      width: ceil($value/26);
+    }
+  }
+
+  > svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.circle {
+  padding: 5px;
+
+  &:before {
+    top: 0;
+    left: 0;
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 2px solid currentColor;
+    border-radius: 50%;
+  }
+
+  &.medium {
+    padding: 8px;
+  }
+
+  &.large {
+    padding: 10px;
+  }
+
+  &.huge {
+    padding: 10px;
+  }
+}

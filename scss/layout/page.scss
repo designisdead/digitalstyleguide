@@ -1,0 +1,97 @@
+$pageHeaderHeight: 75px;
+
+.Page-sidebarState {
+  display: none;
+}
+
+.Page {
+  position: fixed;
+  height: 100vh;
+  width: 180vw;
+  transform: translate3d(-80vw,0,0);
+
+  transition: 0.45s cubic-bezier(.24,.54,.27,.99) transform;
+  .Page-sidebarState:checked + & {
+    transform: translate3d(0,0,0);
+  }
+}
+
+.Page-sidebar {
+  position: fixed;
+  width: 80vw;
+  height: 100vh;
+  background: black;
+  color: white;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+.Page-main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: 80vw;
+  overflow-y: scroll;
+
+  .Page-sidebarState:checked + .Page & {
+    overflow-y: hidden;
+  }
+}
+
+.Page-toggle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 20px;
+  cursor: pointer;
+  display: block;
+  user-select: none;
+  outline: none;
+  text-indent: -999px;
+  transform: translateY(-50%);
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    background: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+  }
+
+  > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+.Page-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  cursor: pointer;
+  .Page-sidebarState:checked + .Page & {
+    width: 100%;
+    height: 150%;
+  }
+}
+
+.Page-header {
+  position: fixed;
+  width: 100%;
+  height: $pageHeaderHeight;
+  background: $color-light;
+  z-index: 1;
+}
+
+.Page-content {
+  padding-top: $pageHeaderHeight;
+}
+
+.Page-footer {
+  
+}

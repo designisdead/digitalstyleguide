@@ -1,17 +1,43 @@
 ---
 layout: default
 ---
-<article>
-    <header class="Hero small">
-        <div class="Hero-content">
+<input type="checkbox" class="Page-sidebarState" id="page-sidebarstate">
+<div class="Page">
+    <div class="Page-sidebar">
+    sidebar
+    </div>
+
+    <div class="Page-main" id="scrollingPanel">
+        <label class="Page-overlay" for="page-sidebarstate"></label>
+        <div class="Page-header">
+            <label class="Page-toggle" for="page-sidebarstate">
+                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-menu"></use></svg>
+            </label>
+        </div>
+        <div class="Page-content">
+            {{ content }}
+        </div>
+        <div class="Page-footer">
             <div class="Wrapper large">
-                <h1 class="Title huge">{{ page.title }}</h1>
+                <div class="Footer">
+                      <div class="Footer-left">
+                          <a href="https://twitter.com/designisdead" class="Icon circle large u-colorTwitter"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-twitter"></use></svg></a>
+                          &nbsp;
+                          <a href="https://www.facebook.com/DesignisDead/" class="Icon circle large u-colorFacebook"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-facebook"></use></svg></a>
+                          &nbsp;
+                          <a href="https://www.linkedin.com/company/design-is-dead" class="Icon circle large u-colorLinkedin"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-linkedin"></use></svg></a>
+                      </div>
+                      <div class="Footer-right">
+                          <span class="Footer-copyright">&copy;  {{ site.time | date: "%Y"}}</span>
+                          &nbsp;
+                          <span class="Footer-knuckles">
+                              <span class="Icon medium">
+                                <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-knuckles"></use></svg>
+                              </span>
+                          </span>
+                      </div>
+                </div>
             </div>
         </div>
-    </header>
-    <hr/>
-
-    <div class="Wrapper large">
-        {{ content }}
     </div>
-</article>
+</div>

@@ -11,10 +11,9 @@ $teaserIconSize: 120px;
 }
 
 .Teaser-image {
+  display: flex;
   position: relative;
-  background-image: url(https://images.unsplash.com/photo-1495312040802-a929cd14a6ab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b12706b9ac3e3d4784e617a474f4332a&auto=format&fit=crop&w=1189&q=80);
-  background-size: cover;
-  background-position: center center;
+  background: $color-dark center center / cover;
   width: 100%;
   height: 150px;
   margin-bottom: 40px;

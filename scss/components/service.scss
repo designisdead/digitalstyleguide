@@ -1,0 +1,28 @@
+.Services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0 !important;
+  max-width: size('large');
+  margin: 0 auto;
+}
+
+.Service {
+  display: inline-block;
+  flex-grow: 1;
+  width: 50%;
+  max-width: 50%;
+  &:before {
+    display: none;
+  }
+
+  @media screen and (min-width: size('medium')) {
+    width: 33.32%;
+    max-width: 33.32%;
+  }
+
+  @media screen and (min-width: size('large')) {
+    width: auto;
+    max-width: none;
+  }
+}

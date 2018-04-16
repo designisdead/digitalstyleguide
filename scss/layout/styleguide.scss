@@ -1,15 +1,15 @@
-.Layout {
+.Styleguide {
   position: fixed;
   width: 100%;
   height: 100%;
   background: darken($color-light,5%);
 }
 
-.Layout-sidebarState {
+.Styleguide-sidebarState {
   display: none;
 }
 
-.Layout-toggleSidebar {
+.Styleguide-toggleSidebar {
   position: relative;
   width: $layout-sidebar--collapsed;
   height: $layout-sidebar--collapsed;
@@ -28,7 +28,7 @@
   }
 }
 
-.Layout-sidebar {
+.Styleguide-sidebar {
   position: fixed;
   top: 0;
   left: 100%;
@@ -42,7 +42,7 @@
   overflow-x: hidden;
 
   // slide in sidebar when toggle is checked
-  #toggle-sidebar:checked ~ .Layout & {
+  #toggle-sidebar:checked ~ .Styleguide & {
     transform: translateX(-#{$layout-sidebar--expanded});
   }
 
@@ -52,7 +52,7 @@
   }
 }
 
-.Layout-main {
+.Styleguide-main {
   position: fixed;
   transition: 0.25s transform ease;
   will-change: transform;
@@ -66,7 +66,7 @@
     width: calc(100% - #{$layout-sidebar--expanded});
   }
 
-  #toggle-sidebar:checked ~ .Layout & {
+  #toggle-sidebar:checked ~ .Styleguide & {
     transform: translateX(-$layout-sidebar--expanded);
     @media screen and (min-width: $layout-sidebar--alwaysShowSidebar) {
       transform: translateX(0);
@@ -74,7 +74,7 @@
   }
 }
 
-.Layout-footer {
+.Styleguide-footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -91,12 +91,12 @@
     display: none;
   }
 
-  #toggle-sidebar:checked ~ .Layout & {
+  #toggle-sidebar:checked ~ .Styleguide & {
     transform: translateX(-$layout-sidebar--expanded);
   }
 }
 
-.Layout-footerContent {
+.Styleguide-footerContent {
   flex: 1;
   display: flex;
   justify-content: space-between;

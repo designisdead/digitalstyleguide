@@ -15,10 +15,31 @@
   color: $color-dark;
 }
 
+.u-colorTwitter {
+  color: $color-twitter;
+}
+
+.u-colorFacebook {
+  color: $color-facebook;
+}
+
+.u-colorLinkedin {
+  color: $color-linkedin;
+}
+
 .u-backgroundColorPrimary {
   background-color: $color-primary;
 }
 
 .u-backgroundColorDark {
   background-color: $color-dark;
+}
+
+.u-noListStyleType {
+  li {
+    padding-left: 0;
+    &:before {
+      display: none;
+    }
+  }
 }
