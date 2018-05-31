@@ -4,7 +4,8 @@ $teaserIconSize: 120px;
   position: relative;
   font-family: 'Arial';
   @media screen and (min-width: size('medium')) {
-    height: 400px;
+    min-height: 400px;
+    height: 50vh;
     display: flex;
     align-items: center;
   }

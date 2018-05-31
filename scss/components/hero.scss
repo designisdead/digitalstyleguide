@@ -1,25 +1,27 @@
 .Hero {
-  min-height: 40vh;
+  height: 50vw;
+  max-height: 80vh;
   display: flex;
   background-size: cover;
   background-position: center center;
   &.tiny {
-    min-height: 10vh;
+    height: 10vh;
   }
   &.small {
-    min-height: 20vh;
+    height: 20vh;
   }
   &.medium {
-    min-height: 40vh;
+    height: 40vh;
   }
   &.large {
-    min-height: 60vh;
+    height: 60vh;
   }
   &.huge {
-    min-height: 80vh;
+    height: 80vh;
   }
   &.fullscreen {
-    min-height: 100vh;
+    height: 100vh;
+    max-height: 100vh;
   }
 }
 
